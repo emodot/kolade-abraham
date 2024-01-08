@@ -2,7 +2,7 @@
   <div class="mobile-menu come-down">
     <div class="mobile-header">
       <div class="logo">
-        <img src="~assets/images/anycar_logo.png" alt="logo">
+        <img src="~assets/images/KA-logo.png" alt="logo">
       </div>
       <div class="close" @click="$emit('closeMobileMenu')">
         <span class="bar" />
