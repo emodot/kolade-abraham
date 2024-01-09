@@ -10,29 +10,19 @@
       </div>
     </div>
     <div class="menu-container">
-      <nuxt-link to="/buy-car">
+      <nuxt-link to="/">
         <p class="menu-text">
-          Buy Car
-        </p>
-      </nuxt-link>
-      <nuxt-link to="/sell-car">
-        <p class="menu-text">
-          Sell Car
-        </p>
-      </nuxt-link>
-      <nuxt-link to="/compare-cars">
-        <p class="menu-text">
-          Compare
+          Home
         </p>
       </nuxt-link>
       <nuxt-link to="#">
         <p class="menu-text">
-          Verify a Car
+          Projects
         </p>
       </nuxt-link>
       <nuxt-link to="#">
         <p class="menu-text">
-          Solutions
+          Abur
         </p>
       </nuxt-link>
     </div>

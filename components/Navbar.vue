@@ -12,10 +12,10 @@
       </div>
       <div class="navbar_rhs">
         <div class="menu_list">
-          <nuxt-link to="/buy-car">
+          <nuxt-link to="/">
             <p class="menu_item">Home</p>
           </nuxt-link>
-          <nuxt-link to="/sell-car">
+          <nuxt-link to="#">
             <p class="menu_item">Projects</p>
           </nuxt-link>
           <nuxt-link to="#">
