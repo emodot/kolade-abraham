@@ -54,6 +54,10 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #000;
+}
+
 button {
   outline: none;
   border: none;
