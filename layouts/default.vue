@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 .main {
-  background-color: #ffffff;
+  background-color: #000;
 }
 
 </style>
