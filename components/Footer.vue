@@ -44,7 +44,7 @@
           <p class="made_with">Made with ♥ & ♫ | Kolade Abraham</p>
         </div>
         <div class="bottom_rhs">
-          <p class="copyright">Copyrights © 2023</p>
+          <p class="copyright">Copyrights © 2024</p>
         </div>
       </div>
     </div>
