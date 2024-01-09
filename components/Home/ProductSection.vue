@@ -1,7 +1,7 @@
 <template>
   <div class="product_ctn">
     <div class="product_inner">
-      <!-- <div v-for="(project, index) in projects" :key="index" class="product_section" :class="index % 2 !== 0 ? 'reversed_section' : ''">
+      <div v-for="(project, index) in projects" :key="index" class="product_section" :class="index % 2 !== 0 ? 'reversed_section' : ''">
         <div class="section_lhs">
           <img :src="`_nuxt/${project.image}`" alt="" />
         </div>
@@ -16,7 +16,7 @@
             </button>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
