@@ -1,6 +1,7 @@
 <template>
   <div class="main_ctn">
     <HomeHeroSection />
+    <HomeProductSection />
   </div>
 </template>
 

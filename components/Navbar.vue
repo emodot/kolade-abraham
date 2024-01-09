@@ -24,7 +24,7 @@
           <div class="account_btn">
             <button class="global_btn">
               My Account
-              <span class="material-icons-outlined arrow_right"> navigate_next </span>
+              <span class="material-icons-outlined arrow_right"> chevron_right </span>
             </button>
           </div>
         </div>
@@ -66,7 +66,7 @@ const productList = ref({});
 
 <style scoped>
 .navbar_ctn {
-  background-color: #000000;
+  background-color: transparent;
   /* box-shadow: 0px 5px 20px #dadada; */
   position: fixed;
   width: 100%;
@@ -114,6 +114,8 @@ const productList = ref({});
 }
 
 .global_btn {
+  color: white;
+  border: 1px solid #fff;
   display: flex;
   align-items: center;
 }
