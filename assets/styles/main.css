@@ -1,8 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('../fonts/PowerGroteskTrial-Black.otf');
+  src: url('../fonts/PowerGroteskTrial-Black.otf') format('embedded-opentype'),
+    url('../fonts/PowerGroteskTrial-Black.otf') format('truetype');
+  font-weight: bolder;
+}
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('../fonts/PowerGroteskTrial-Bold.otf');
+  src: url('../fonts/PowerGroteskTrial-Bold.otf') format('embedded-opentype'),
+    url('../fonts/PowerGroteskTrial-Bold.otf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('../fonts/PowerGroteskTrial-Medium.otf');
+  src: url('../fonts/PowerGroteskTrial-Medium.otf') format('embedded-opentype'),
+    url('../fonts/PowerGroteskTrial-Medium.otf') format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('../fonts/PowerGroteskTrial-Regular.otf');
+  src: url('../fonts/PowerGroteskTrial-Regular.otf') format('embedded-opentype'),
+    url('../fonts/PowerGroteskTrial-Regular.otf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Power Grotesk';
+  src: url('../fonts/PowerGroteskTrial-Light.otf');
+  src: url('../fonts/PowerGroteskTrial-Light.otf') format('embedded-opentype'),
+    url('../fonts/PowerGroteskTrial-Light.otf') format('truetype');
+  font-weight: lighter;
+}
+
 :root {
   /* --primary-color: #150A41; */
-  --text-color: ##6F6F6F;
+  --text-color: #6F6F6F;
 }
 
 
