@@ -1,7 +1,7 @@
 <template>
   <div class="product_ctn">
     <div class="product_inner">
-      <div v-for="(project, index) in projects" :key="index" class="product_section" :class="index % 2 !== 0 ? 'reversed_section' : ''">
+      <!-- <div v-for="(project, index) in projects" :key="index" class="product_section" :class="index % 2 !== 0 ? 'reversed_section' : ''">
         <div class="section_lhs">
           <img :src="`_nuxt/${project.image}`" alt="" />
         </div>
@@ -16,7 +16,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -53,6 +53,12 @@ const projects = ref([
     image: 'assets/images/fela.png',
     link: '',
   },
+  {
+    name: 'Kairos Atelier',
+    description: 'Kairos Atelier uses design to address human issues with empathy and innovative solutions, operating as a multidisciplinary studio in architecture, art, and tech.',
+    image: 'assets/images/kairos.png',
+    link: '',
+  },
 ])
 
 </script>
@@ -73,7 +79,7 @@ const projects = ref([
   /* width: 90%; */
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12rem;
+  margin-bottom: 14rem;
 }
 
 .reversed_section {
