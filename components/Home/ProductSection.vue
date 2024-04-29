@@ -3,7 +3,7 @@
     <div class="product_inner">
       <div v-for="(project, index) in projects" :key="index" class="product_section" :class="index % 2 !== 0 ? 'reversed_section' : ''">
         <div class="section_lhs">
-          <img :src="`_nuxt/${project.image}`" alt="" />
+          <img :src="`${project.image}`" alt="" />
         </div>
         <div class="section_rhs">
           <div class="rhs_inner">
