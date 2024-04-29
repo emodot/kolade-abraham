@@ -2,6 +2,7 @@
   <div class="main_ctn">
     <AboutHeroSection />
     <AboutInnerSection />
+    <AboutReviews />
   </div>
 </template>
 
