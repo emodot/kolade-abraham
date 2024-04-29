@@ -32,31 +32,31 @@ const projects = ref([
   {
     name: 'Tra-it AR App',
     description: 'Tra-it AR offers virtual \'try-out\' of ecommerce products, from furniture to clothes, in true-to-scale AR view, before purchase.',
-    image: 'assets/images/ar-app.png',
+    image: '/ar-app.png',
     link: '',
   },
   {
     name: 'OpsPad',
     description: 'OpsPad streamlines DevOps workflow with a minimalist notepad design for monitoring and analyzing infrastructure performance.',
-    image: 'assets/images/opspad.png',
+    image: '/opspad.png',
     link: '',
   },
   {
     name: 'Craigslist',
     description: 'Craigslist\'s redesign mimics a newspaper\'s classifieds, facilitating local business ads, individual sales, and event postings, allowing user responses.',
-    image: 'assets/images/craigslist.png',
+    image: '/craigslist.png',
     link: '',
   },
   {
     name: 'FELA',
     description: 'Most farmers cannot afford to buy tractors outright or secure traditional loans due to a lack of collateral. FELA app connects farmers with equipment providers for leasing solutions.',
-    image: 'assets/images/fela.png',
+    image: '/fela.png',
     link: '',
   },
   {
     name: 'Kairos Atelier',
     description: 'Kairos Atelier uses design to address human issues with empathy and innovative solutions, operating as a multidisciplinary studio in architecture, art, and tech.',
-    image: 'assets/images/kairos.png',
+    image: '/kairos.png',
     link: '',
   },
 ])
@@ -103,6 +103,14 @@ const projects = ref([
 
 .rhs_inner {
   width: 75%;
+}
+
+
+.product_head {
+  color: #232323;
+  font-family: Power Grotesk;
+  font-size: 44px;
+  font-weight: 500;
 }
 
 .product_text {
