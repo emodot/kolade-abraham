@@ -18,7 +18,7 @@
           <nuxt-link to="#">
             <p class="menu_item">Projects</p>
           </nuxt-link>
-          <nuxt-link to="#">
+          <nuxt-link to="/about">
             <p class="menu_item">About</p>
           </nuxt-link>
           <div class="account_btn">

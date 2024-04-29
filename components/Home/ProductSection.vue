@@ -26,7 +26,7 @@ const projects = ref([
   {
     name: 'Vaccess App',
     description: 'Vaccess provides a seamless mobile app and website, streamlining Lagos vaccination center searches with real-time data, intuitive interfaces, and appointment booking.',
-    image: 'assets/images/vaccess.png',
+    image: '/vaccess.png',
     link: '',
   },
   {
