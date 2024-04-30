@@ -11,13 +11,13 @@
       </div>
     </div>
     <div class="menu-container">
-      <nuxt-link to="/">
+      <nuxt-link to="/" @click="$emit('closeMobileMenu')">
         <p class="menu-text">Home</p>
       </nuxt-link>
       <!-- <nuxt-link to="#">
         <p class="menu-text">Projects</p>
       </nuxt-link> -->
-      <nuxt-link to="/about">
+      <nuxt-link to="/about" @click="$emit('closeMobileMenu')">
         <p class="menu-text">About</p>
       </nuxt-link>
     </div>
@@ -89,7 +89,7 @@ export default {
 .bar,
 .bar2 {
   display: block;
-  width: 25px;
+  width: 22px;
   height: 2px;
   margin: 5px auto;
   background-color: #fff;

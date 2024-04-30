@@ -20,7 +20,7 @@
 export default {
   data () {
     return {
-      showMobileMenu: true
+      showMobileMenu: false
     }
   },
 

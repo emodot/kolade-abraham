@@ -149,7 +149,7 @@ const productList = ref({});
 
 .hamburger {
   cursor: pointer;
-  width: 30px;
+  width: 24px;
 }
 
 @media only screen and (max-width: 1200px) {
