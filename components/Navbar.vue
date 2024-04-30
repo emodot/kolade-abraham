@@ -35,7 +35,7 @@
             class="hamburger"
             src="assets/icons/hamburger.svg"
             alt=""
-            @click="$emit('showMobileMenu')"
+            @click="$emit('triggerMobileMenu')"
           />
         </div>
       </div>

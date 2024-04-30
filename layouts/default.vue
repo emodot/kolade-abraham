@@ -1,8 +1,7 @@
 <template>
   <div class="main">
     <Navbar
-      @open-cart="openCart = true"
-      @showMobileMenu="showMobileMenu = true"
+      @triggerMobileMenu="showMobileMenu = true"
     />
     <div class="mobile-menu">
       <MobileMenu
@@ -21,12 +20,9 @@
 export default {
   data () {
     return {
-      openCart: false,
-      showMobileMenu: false
+      showMobileMenu: true
     }
   },
-  methods: {
-  }
 
 }
 </script>
