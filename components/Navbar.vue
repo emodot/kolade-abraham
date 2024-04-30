@@ -24,17 +24,19 @@
           <div class="account_btn">
             <button class="global_btn">
               My Account
-              <span class="material-icons-outlined arrow_right"> chevron_right </span>
+              <span class="material-icons-outlined arrow_right">
+                chevron_right
+              </span>
             </button>
           </div>
         </div>
         <div class="mobile_menu">
-          <span
-            class="material-icons-outlined"
+          <img
+            class="hamburger"
+            src="assets/icons/hamburger.svg"
+            alt=""
             @click="$emit('showMobileMenu')"
-          >
-            menu
-          </span>
+          />
         </div>
       </div>
     </div>
@@ -101,7 +103,7 @@ const productList = ref({});
 
 .navbar_rhs {
   height: 100%;
-  flex-basis: 55%;
+  flex-basis: 75%;
   display: flex;
   justify-content: flex-end;
 }
@@ -145,6 +147,11 @@ const productList = ref({});
   border-left: 1px solid var(--border-color);
 }
 
+.hamburger {
+  cursor: pointer;
+  width: 30px;
+}
+
 @media only screen and (max-width: 1200px) {
   /* .navbar_lhs {
     flex-basis: 30%;
@@ -158,12 +165,12 @@ const productList = ref({});
 }
 @media only screen and (max-width: 900px) {
   .logo {
-    width: 80%;
+    width: 60%;
   }
   .navbar_inner {
-    width: 90%;
+    width: 80%;
   }
-  .navbar_middle {
+  .menu_list {
     display: none;
   }
   .mobile_menu {
@@ -173,8 +180,11 @@ const productList = ref({});
   }
 }
 @media only screen and (max-width: 500px) {
+  .logo {
+    width: 40%;
+  }
   .navbar_inner {
-    width: 90%;
+    width: 85%;
   }
   .navbar_lhs {
     flex-basis: 40%;

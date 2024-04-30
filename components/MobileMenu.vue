@@ -22,7 +22,7 @@
       </nuxt-link>
       <nuxt-link to="#">
         <p class="menu-text">
-          Abur
+          About
         </p>
       </nuxt-link>
     </div>
