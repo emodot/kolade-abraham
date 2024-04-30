@@ -6,8 +6,11 @@
           <div class="text_side_inner">
             <h1 class="about_head">Who am I?</h1>
             <p class="about_text">
-              My name is <span class="bold_text">Kolade</span> and I’m a <span class="bold_text">Product Designer based in Lagos, NG.</span> I
-              have a Masters in Architecture, and a background in Graphics
+              My name is <span class="bold_text">Kolade</span> and I’m a
+              <span class="bold_text"
+                >Product Designer based in Lagos, NG.</span
+              >
+              I have a Masters in Architecture, and a background in Graphics
               design.
             </p>
           </div>
@@ -21,10 +24,19 @@
           <div class="text_side_inner">
             <h1 class="about_head">What do I do?</h1>
             <p class="about_text">
-              <span class="bold_text">As a technology geek and a person who loves to attend UX conferences. I also bring with me a diverse culture that influences my design.</span> My background in Architecture also helps me look at design from an ergonomics point of view in addition to advocating for user’s needs and desires.
+              <span class="bold_text"
+                >As a technology geek and a person who loves to attend UX
+                conferences. I also bring with me a diverse culture that
+                influences my design.</span
+              >
+              My background in Architecture also helps me look at design from an
+              ergonomics point of view in addition to advocating for user’s
+              needs and desires.
             </p>
             <p class="about_text">
-              <span class="bold_text">Currently, I'm designing experiences for Access Bank.</span>
+              <span class="bold_text"
+                >Currently, I'm designing experiences for Access Bank.</span
+              >
             </p>
           </div>
         </div>
@@ -37,7 +49,13 @@
           <div class="text_side_inner">
             <h1 class="about_head">What am I passionate about?</h1>
             <p class="about_text">
-              <span class="bold_text">I have a healthy obsession with how people interact with technology and connect people to ideas in a way that generates excitement.</span> I am curious and I like diving deep into emerging tech and latest trends to know more new spaces
+              <span class="bold_text"
+                >I have a healthy obsession with how people interact with
+                technology and connect people to ideas in a way that generates
+                excitement.</span
+              >
+              I am curious and I like diving deep into emerging tech and latest
+              trends to know more new spaces
             </p>
           </div>
         </div>
@@ -119,5 +137,41 @@
   margin-bottom: 30px;
   line-height: 28px;
   color: #000000;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about_inner {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about_ctn {
+    padding: 5rem 0;
+  }
+  .about_section {
+    flex-direction: column-reverse;
+    margin-bottom: 5rem;
+  }
+  .about_head {
+    font-size: 35px;
+    text-align: center;
+  }
+  .about_text {
+    text-align: center;
+  }
+  .section_image_side {
+    margin-left: 0;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .section_image_side img {
+    width: 70%;
+  }
+  .reversed_section > .section_image_side {
+    margin-right: 0;
+    margin-top: -30px;
+  }
 }
 </style>
