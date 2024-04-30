@@ -2,14 +2,14 @@
   <div class="hero_ctn">
     <div class="hero_inner">
       <img src="assets/images/2.webp" alt="" />
-      <h1 class="hero_head">Oops, Almost done!</h1>
+      <h1 class="hero_head">Oops<span class="spanned_text">, Almost done</span>!</h1>
       <p class="hero_text">
         This project’s information is all-over-the-place. <br />I am working
         hard to present it beautifully and will update it soon.
       </p>
       <div class="btns">
         <a href="https://dribbble.com/Kola_abr" target="_blank">
-          <button class="global_btn">Checkout My dribbble</button>
+          <button class="global_btn"><span class="spanned_text">Checkout</span> My dribbble</button>
         </a>
         <button class="global_btn btn_2" @click="navigateTo('/')">
           Back to Home
@@ -50,10 +50,6 @@ export default {
   justify-content: center;
 }
 
-.hero_image {
-  width: fit-content;
-}
-
 img {
   text-align: center;
   margin: auto;
@@ -68,6 +64,13 @@ img {
   font-style: normal;
   font-weight: 500;
   text-align: center;
+}
+
+.spanned_text {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .hero_text {
@@ -100,5 +103,28 @@ img {
 .arrow_right {
   color: #0C0C0C;
   margin-left: 6px;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .hero_inner {
+    width: 85%;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .spanned_text {
+    display: none;
+  }
+  img {
+    width: 50%;
+  }
+  .hero_head {
+    font-size: 40px;
+  }
+  .hero_text {
+    font-size: 14px;
+  }
 }
 </style>
