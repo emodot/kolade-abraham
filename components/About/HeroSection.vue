@@ -11,7 +11,7 @@
 <style scoped>
 .hero_ctn {
   height: 80vh;
-  background-image: url('assets/images/about_hero.jpg');
+  background-image: url("assets/images/about_hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -21,7 +21,7 @@
 
 .hero_inner {
   max-width: 1344px;
-  width: 40%;
+  /* width: 40%; */
   margin: auto;
 }
 
@@ -39,14 +39,25 @@
   margin-top: 15px;
 }
 
-.spaned_text {
-  color: #B8B8B8;
-  font-size: 20px;
+@media only screen and (max-width: 1200px) {
+  .hero_ctn {
+    height: 80vh;
+  }
+  .hero_head {
+    font-size: 45px;
+  }
 }
 
-.wavy {
-  text-decoration: underline;
-  text-decoration-color: var(--text-color);
-  text-decoration-style: wavy;
+@media only screen and (max-width: 500px) {
+  .hero_inner {
+    width: 100%;
+    position: relative;
+    height: 100%;
+  }
+  .hero_head {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+  }
 }
 </style>
