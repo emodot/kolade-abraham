@@ -3,41 +3,44 @@
     <div class="footer_inner">
       <div class="footer_top">
         <div class="footer_lhs">
-        <p class="footer_head">GET IN TOUCH</p>
-        <p class="email">Contact@abrahamkolade.com</p>
-        <p class="location">Lagos, NG</p>
-      </div>
-      <div class="footer_rhs">
-        <p class="footer_head">LET'S CONNECT</p>
-        <div class="rhs_inner">
-          <div class="lhs_links">
-            <a
-              class="links"
-              href="https://www.linkedin.com/in/kolade-m-abraham/"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <a class="links" href="https://twitter.com/Kola_Abr" target="_blank"
-              >Twitter</a
-            >
-            <a class="links" href="#" target="_blank">Resume</a>
-          </div>
-          <div class="rhs_links">
-            <a
-              class="links"
-              href="https://dribbble.com/kola_abr"
-              target="_blank"
-              >Dribbble</a
-            >
-            <a
-              class="links"
-              href="https://www.behance.net/kola_abr"
-              target="_blank"
-              >Behance</a
-            >
+          <p class="footer_head">GET IN TOUCH</p>
+          <p class="email">Contact@abrahamkolade.com</p>
+          <p class="location">Lagos, NG</p>
+        </div>
+        <div class="footer_rhs">
+          <p class="footer_head">LET'S CONNECT</p>
+          <div class="rhs_inner">
+            <div class="lhs_links">
+              <a
+                class="links"
+                href="https://www.linkedin.com/in/kolade-m-abraham/"
+                target="_blank"
+                >LinkedIn</a
+              >
+              <a
+                class="links"
+                href="https://twitter.com/Kola_Abr"
+                target="_blank"
+                >Twitter</a
+              >
+              <a class="links" href="#" target="_blank">Resume</a>
+            </div>
+            <div class="rhs_links">
+              <a
+                class="links"
+                href="https://dribbble.com/kola_abr"
+                target="_blank"
+                >Dribbble</a
+              >
+              <a
+                class="links"
+                href="https://www.behance.net/kola_abr"
+                target="_blank"
+                >Behance</a
+              >
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <div class="footer_bottom">
         <div class="bottom_lhs">
@@ -128,5 +131,40 @@ a {
 
 .links {
   margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer_inner {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer_rhs {
+    flex-basis: 30%;
+    margin-top: 40px;
+  }
+
+  .rhs_inner {
+    width: 70%;
+    flex-direction: column;
+  }
+
+  .footer_top {
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+
+  .email {
+    font-size: 20px;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+  }
+  
+  .bottom_rhs {
+    margin-top: 30px;
+  }
 }
 </style>
