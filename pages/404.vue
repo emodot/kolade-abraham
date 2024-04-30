@@ -2,14 +2,18 @@
   <div class="hero_ctn">
     <div class="hero_inner">
       <img src="assets/images/2.webp" alt="" />
-      <h1 class="hero_head">Oops<span class="spanned_text">, Almost done</span>!</h1>
+      <h1 class="hero_head">
+        Oops<span class="spanned_text">, Almost done</span>!
+      </h1>
       <p class="hero_text">
         This project’s information is all-over-the-place. <br />I am working
         hard to present it beautifully and will update it soon.
       </p>
       <div class="btns">
         <a href="https://dribbble.com/Kola_abr" target="_blank">
-          <button class="global_btn"><span class="spanned_text">Checkout</span> My dribbble</button>
+          <button class="global_btn">
+            <span class="spanned_text">Checkout</span> My dribbble
+          </button>
         </a>
         <button class="global_btn btn_2" @click="navigateTo('/')">
           Back to Home
@@ -22,14 +26,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    goBack() {
-      this.$router.push("/");
-    },
-  },
-};
+<script setup>
+definePageMeta({
+  layout: "error",
+});
+useHead(() => ({
+  status: 404,
+  title: "Page not found",
+}));
 </script>
 
 <style scoped>
@@ -97,21 +101,19 @@ img {
 
 .btn_2 {
   background-color: #fff;
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 
 .arrow_right {
-  color: #0C0C0C;
+  color: #0c0c0c;
   margin-left: 6px;
 }
-
 
 @media only screen and (max-width: 900px) {
   .hero_inner {
     width: 85%;
   }
 }
-
 
 @media only screen and (max-width: 500px) {
   .spanned_text {
