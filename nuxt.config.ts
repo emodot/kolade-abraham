@@ -18,6 +18,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  modules: ["@hypernym/nuxt-gsap"],
   devtools: { enabled: true },
   css: ["@/assets/styles/main.css"],
 });

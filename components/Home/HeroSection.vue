@@ -1,19 +1,80 @@
 <template>
   <div class="hero_ctn">
     <div class="hero_inner">
-      <h1 class="hero_head">Hello,</h1>
+      <div class="header_ctn">
+        <div class="v-slides">
+          <h1 class="hero_head">Hello,</h1>
+          <h1 class="hero_head">Hi,</h1>
+          <h1 class="hero_head">Hey,</h1>
+        </div>
+      </div>
       <p class="hero_text">
-        I am ‘Kola, I like to make digital experiences <span class="spaned_text wavy">easier and simpler</span> for
-        people.
+        I am ‘Kola, I like to make digital experiences
+        <span class="spaned_text wavy">easier and simpler</span> for people.
       </p>
       <p class="hero_text">
-        Currently working as a <span class="spaned_text">Product Designer</span> at <span class="spaned_text">Access Bank.</span>
+        Currently working as a
+        <span class="spaned_text">Product Designer</span> at
+        <span class="spaned_text">Access Bank.</span>
       </p>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { $gsap } = useNuxtApp();
+onMounted(() => {
+  $gsap.from(".hero_inner", { x: 200, duration: 1 });
+  var vsOpts = {
+    slides: document.querySelectorAll(".hero_head"),
+    list: document.querySelector(".v-slides"),
+    duration: 0.3,
+    lineHeight: 50,
+  };
+  var vSlide = $gsap.timeline({
+    paused: true,
+    repeat: -1,
+  });
+
+  vsOpts.slides.forEach(function (slide, i) {
+    // Create a label
+    let label = "slide" + i;
+    vSlide.add(label);
+
+    // Move the whole word
+    if (i > 0) {
+      vSlide.to(
+        vsOpts.list,
+        {
+          duration: vsOpts.duration,
+          y: i * -1 * vsOpts.lineHeight,
+        },
+        label
+      );
+
+      // Move each letter
+      let letters = new SplitText(slide, { type: "chars" }).chars;
+      vSlide.from(
+        letters,
+        {
+          duration: vsOpts.duration,
+          y: 50,
+          stagger: vsOpts.duration / 10,
+        },
+        label
+      );
+
+      // Add some blank space before the next animation
+      vSlide.to({}, { duration: 1 });
+    }
+  });
+  vSlide.play();
+});
+
+// const animateText = () => {
+
+// };
+</script>
 
 <style scoped>
 .hero_ctn {
@@ -27,6 +88,12 @@
   max-width: 1344px;
   width: 70%;
   margin: auto;
+}
+
+.header_ctn {
+  /* border: 1px solid #4BB3FD; */
+  height: 90px;
+  overflow: hidden;
 }
 
 .hero_head {
@@ -44,7 +111,7 @@
 }
 
 .spaned_text {
-  color: #B8B8B8;
+  color: #b8b8b8;
   font-size: 20px;
 }
 
