@@ -15,7 +15,7 @@
           <nuxt-link to="/">
             <p class="menu_item">Home</p>
           </nuxt-link>
-          <nuxt-link to="#">
+          <nuxt-link to="/projects">
             <p class="menu_item">Projects</p>
           </nuxt-link>
           <nuxt-link to="/about">
