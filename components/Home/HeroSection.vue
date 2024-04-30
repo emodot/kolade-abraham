@@ -1,13 +1,7 @@
 <template>
   <div class="hero_ctn">
     <div class="hero_inner">
-      <div class="header_ctn">
-        <div class="v-slides">
-          <h1 class="hero_head">Hello,</h1>
-          <h1 class="hero_head">Hi,</h1>
-          <h1 class="hero_head">Hey,</h1>
-        </div>
-      </div>
+      <h1 class="hero_head">Hello,</h1>
       <p class="hero_text">
         I am ‘Kola, I like to make digital experiences
         <span class="spaned_text wavy">easier and simpler</span> for people.
@@ -24,7 +18,7 @@
 <script setup>
 const { $gsap } = useNuxtApp();
 onMounted(() => {
-  $gsap.from(".hero_inner", { x: 200, duration: 1 });
+  $gsap.from(".hero_inner", { y: 200, duration: 1 });
   // var vsOpts = {
   //   slides: document.querySelectorAll(".hero_head"),
   //   list: document.querySelector(".v-slides"),
@@ -90,12 +84,6 @@ onMounted(() => {
   margin: auto;
 }
 
-.header_ctn {
-  /* border: 1px solid #4BB3FD; */
-  height: 90px;
-  overflow: hidden;
-}
-
 .hero_head {
   color: #fff;
   font-family: Power Grotesk;
@@ -108,16 +96,35 @@ onMounted(() => {
   color: var(--text-color);
   font-size: 20px;
   margin-top: 15px;
+  line-height: 26px;
 }
 
 .spaned_text {
   color: #b8b8b8;
-  font-size: 20px;
+  font-size: inherit;
 }
 
 .wavy {
   text-decoration: underline;
   text-decoration-color: var(--text-color);
   text-decoration-style: wavy;
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero_ctn {
+    height: 80vh;
+  }
+
+  .hero_inner {
+    width: 85%;
+  }
+
+  .hero_head {
+    font-size: 56px;
+  }
+
+  .hero_text {
+    font-size: 16px;
+  }
 }
 </style>
