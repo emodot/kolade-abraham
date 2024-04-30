@@ -1,8 +1,9 @@
 <template>
-  <div class="mobile-menu come-down">
-    <div class="mobile-header">
+  <div class="mobile_bg">
+    <div class="mobile-menu come-down">
+    <div class="navbar_inner">
       <div class="logo">
-        <img src="~assets/images/KA-logo.png" alt="logo">
+        <img src="~assets/images/KA-logo.png" alt="logo" />
       </div>
       <div class="close" @click="$emit('closeMobileMenu')">
         <span class="bar" />
@@ -11,79 +12,73 @@
     </div>
     <div class="menu-container">
       <nuxt-link to="/">
-        <p class="menu-text">
-          Home
-        </p>
+        <p class="menu-text">Home</p>
       </nuxt-link>
-      <nuxt-link to="#">
-        <p class="menu-text">
-          Projects
-        </p>
-      </nuxt-link>
-      <nuxt-link to="#">
-        <p class="menu-text">
-          About
-        </p>
+      <!-- <nuxt-link to="#">
+        <p class="menu-text">Projects</p>
+      </nuxt-link> -->
+      <nuxt-link to="/about">
+        <p class="menu-text">About</p>
       </nuxt-link>
     </div>
     <div class="account_btn">
-      <button class="global_btn">
-        My Account
-      </button>
+      <a href="mailto:contact@abrahamkolade.com" target="_blank">
+        <button class="global_btn">
+          Lets Talk
+          <span class="material-icons-outlined arrow_right">
+            chevron_right
+          </span>
+        </button>
+      </a>
     </div>
+  </div>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-    }
+  data() {
+    return {};
   },
-  methods: {
-  }
-}
+  methods: {},
+};
 </script>
 
 <style scoped>
-/* MOBILE HEADER  */
-
-.mobile-menu {
+.mobile_bg {
   position: fixed;
-  z-index: 15;
-  background-color: #ffffff;
   width: 100%;
-  border-bottom: 5px solid #0081fa33;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  z-index: 15;
 }
 
-.mobile-header {
-  height: 9vh;
+.mobile-menu {
+  /* position: fixed; */
+  z-index: 15;
+  background-color: #000;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.navbar_inner {
+  max-width: 1344px;
+  height: 120px;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  padding: 15px 50px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.068);
+  justify-content: space-between;
+  width: 80%;
+}
+
+.logo {
+  /* margin-right: 5rem; */
+  width: 12%;
 }
 
 .logo img {
-  width: 160px;
-}
-
-.middle-section {
-  padding: 10px 50px;
-}
-
-.profile {
-  background: rgb(173, 192, 216);
-  padding: 8px 10px;
-  border-radius: 50%;
-  margin-right: 30px;
-}
-
-#user {
-  width: 18px;
-  height: 18px;
+  cursor: pointer;
+  width: 100%;
 }
 
 .close {
@@ -97,15 +92,8 @@ export default {
   width: 25px;
   height: 2px;
   margin: 5px auto;
-  background-color: #000000;
+  background-color: #fff;
   cursor: pointer;
-}
-
-.bar,
-.bar2 {
-  display: block;
-  width: 25px;
-  height: 2px;;
 }
 
 .bar {
@@ -124,100 +112,37 @@ export default {
   width: 100%;
 }
 
-.menu-header-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px 20px 50px;
-  color: black;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.068);
-}
-
-.inner .menu-text {
-  padding: 20px 60px;
-  color: rgba(255, 255, 255, 0.554);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.068);
-}
-
 .menu-text {
   padding: 30px 50px;
-  color: #000000;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.169);
-}
-
-/* a.nuxt-link-exact-active {
-  color: #0082FA;
-} */
-
-a.nuxt-link-exact-active .menu-text,
-a.nuxt-link-exact-active .user p,
-a:hover {
-  color: var(--primary-color);
-}
-
-.user {
-  /* padding: 20px 0; */
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 54px;
-  align-items: center;
-}
-
-/* .user p {
-  margin: 0 10px;
-  font-size: 18px;
-  color: black;
-} */
-
-.user-sec {
-  display: flex;
-  align-items: center;
-}
-
-.username {
-  margin-left: 15px;
-  font-weight: 500;
-}
-
-.log-out {
-  font-weight: 700;
-  color: #0082FA;
-  margin-right: 20px;
-  cursor: pointer;
-  font-size: 18px;
+  color: #fff;
+  text-align: center;
 }
 
 .account_btn {
-  margin: 30px 0 30px 20px;
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.global_btn {
+  color: white;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+}
+.arrow_right {
+  color: #fff;
+  margin-left: 6px;
 }
 
 @media only screen and (max-width: 500px) {
-  .mobile-header {
-    height: 11vh;
-    padding: 15px;
+  .logo {
+    width: 14%;
   }
-
-  .logo img {
-    width: 60px;
+  .navbar_inner {
+    width: 85%;
   }
   .menu-text {
     padding: 20px 20px;
-  }
-  .menu-header-box {
-    padding: 20px 30px 20px 20px;
-  }
-  .user p {
-    font-size: 15px;
-  }
-  .user {
-    height: 45px;
-  }
-  .middle-section {
-    padding: 10px 20px;
-  }
-  .inner .menu-text {
-    padding: 20px 40px;
   }
 }
 </style>
