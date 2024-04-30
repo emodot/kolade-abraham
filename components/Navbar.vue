@@ -156,8 +156,11 @@ const productList = ref({});
   /* .navbar_lhs {
     flex-basis: 30%;
   } */
+  .navbar_inner {
+    width: 85%;
+  }
   .logo {
-    width: 60%;
+    width: 40%;
   }
   .menu_list {
     width: 80%;
