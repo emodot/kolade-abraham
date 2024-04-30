@@ -22,12 +22,14 @@
             <p class="menu_item">About</p>
           </nuxt-link>
           <div class="account_btn">
-            <button class="global_btn">
-              My Account
-              <span class="material-icons-outlined arrow_right">
-                chevron_right
-              </span>
-            </button>
+            <a href="mailto:contact@abrahamkolade.com" target="_blank">
+              <button class="global_btn">
+                Lets Talk
+                <span class="material-icons-outlined arrow_right">
+                  chevron_right
+                </span>
+              </button>
+            </a>
           </div>
         </div>
         <div class="mobile_menu">
