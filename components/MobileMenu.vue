@@ -14,7 +14,7 @@
       <nuxt-link to="/" @click="$emit('closeMobileMenu')">
         <p class="menu-text">Home</p>
       </nuxt-link>
-      <nuxt-link to="/projects" @click="$emit('closeMobileMenu')">
+      <nuxt-link to="#projects" @click="$emit('closeMobileMenu')">
         <p class="menu-text">Projects</p>
       </nuxt-link>
       <nuxt-link to="/about" @click="$emit('closeMobileMenu')">

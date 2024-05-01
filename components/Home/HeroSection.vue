@@ -1,7 +1,7 @@
 <template>
   <div class="hero_ctn">
     <div class="hero_inner">
-      <h1 class="hero_head">Hello,</h1>
+      <h1 class="hero_head">{{ greetings[currentGreetingIndex] }},</h1>
       <p class="hero_text">
         I am ‘Kola, I like to make digital experiences
         <span class="spaned_text wavy">easier and simpler</span> for people.
@@ -17,52 +17,17 @@
 
 <script setup>
 const { $gsap } = useNuxtApp();
+const greetings = ref(['Hello', 'Bonjour', 'Namaste']);
+const currentGreetingIndex = ref(0);
+
+function updateGreeting() {
+  currentGreetingIndex.value = (currentGreetingIndex.value + 1) % greetings.value.length;
+}
+
+setInterval(updateGreeting, 3000);
+
 onMounted(() => {
   $gsap.from(".hero_inner", { y: 200, duration: 1 });
-  // var vsOpts = {
-  //   slides: document.querySelectorAll(".hero_head"),
-  //   list: document.querySelector(".v-slides"),
-  //   duration: 0.3,
-  //   lineHeight: 50,
-  // };
-  // var vSlide = $gsap.timeline({
-  //   paused: true,
-  //   repeat: -1,
-  // });
-
-  // vsOpts.slides.forEach(function (slide, i) {
-  //   // Create a label
-  //   let label = "slide" + i;
-  //   vSlide.add(label);
-
-  //   // Move the whole word
-  //   if (i > 0) {
-  //     vSlide.to(
-  //       vsOpts.list,
-  //       {
-  //         duration: vsOpts.duration,
-  //         y: i * -1 * vsOpts.lineHeight,
-  //       },
-  //       label
-  //     );
-
-  //     // Move each letter
-  //     let letters = new SplitText(slide, { type: "chars" }).chars;
-  //     vSlide.from(
-  //       letters,
-  //       {
-  //         duration: vsOpts.duration,
-  //         y: 50,
-  //         stagger: vsOpts.duration / 10,
-  //       },
-  //       label
-  //     );
-
-  //     // Add some blank space before the next animation
-  //     vSlide.to({}, { duration: 1 });
-  //   }
-  // });
-  // vSlide.play();
 });
 
 // const animateText = () => {
@@ -90,6 +55,17 @@ onMounted(() => {
   font-size: 76px;
   font-style: normal;
   font-weight: 500;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.hero_head.out {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.hero_head.in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hero_text {
