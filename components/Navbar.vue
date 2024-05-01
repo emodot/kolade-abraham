@@ -1,10 +1,14 @@
 <template>
-  <div class="navbar_ctn">
+  <div
+    class="navbar_ctn"
+    :class="{ 'blurry-bg': scrolled }"
+    @scroll.passive="handleScroll"
+  >
     <div class="navbar_inner">
       <div class="navbar_lhs">
         <div class="logo">
           <img
-            src="~assets/images/KA-logo.png"
+            :src="`${scrolled ? '/KA-logo-black.png' : '/KA-logo.png'}`"
             alt=""
             @click="$router.push('/')"
           />
@@ -13,17 +17,17 @@
       <div class="navbar_rhs">
         <div class="menu_list">
           <nuxt-link to="/">
-            <p class="menu_item">Home</p>
+            <p class="menu_item" :class="{ 'color-black': scrolled }">Home</p>
           </nuxt-link>
-          <nuxt-link to="/projects">
-            <p class="menu_item">Projects</p>
+          <nuxt-link to="#projects">
+            <p class="menu_item" :class="{ 'color-black': scrolled }">Projects</p>
           </nuxt-link>
           <nuxt-link to="/about">
-            <p class="menu_item">About</p>
+            <p class="menu_item" :class="{ 'color-black': scrolled }">About</p>
           </nuxt-link>
           <div class="account_btn">
             <a href="mailto:contact@abrahamkolade.com" target="_blank">
-              <button class="global_btn">
+              <button class="global_btn" :class="{ 'btn-black': scrolled }">
                 Lets Talk
                 <span class="material-icons-outlined arrow_right">
                   chevron_right
@@ -46,35 +50,29 @@
 </template>
 
 <script setup>
-const isSticky = ref(false);
-const productList = ref({});
+const scrolled = ref(false);
 
-// onMounted(() => {
-//   console.log("the component is created");
-//   window.addEventListener("scroll", this.makeHeaderSticky);
-// });
-// onBeforeUnmount(() => {
-//   console.log("the component is destroyed");
-//   window.removeEventListener("scroll", this.makeHeaderSticky);
-// });
+function handleScroll() {
+  scrolled.value = window.scrollY > 0;
+}
 
-// const makeHeaderSticky = () => {
-//   if (window.scrollY > 0) {
-//     isSticky.value = true;
-//   } else {
-//     isSticky.value = false;
-//   }
-//   console.log(isSticky.value);
-// };
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
 </script>
 
 <style scoped>
 .navbar_ctn {
   background-color: transparent;
-  /* box-shadow: 0px 5px 20px #dadada; */
   position: fixed;
   width: 100%;
   z-index: 5;
+  transition: backdrop-filter 0.3s;
+  backdrop-filter: blur(0px);
+}
+.navbar_ctn.blurry-bg {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .navbar_inner {
   max-width: 1344px;
@@ -84,6 +82,17 @@ const productList = ref({});
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.color-black {
+  color: #000 !important;
+}
+.btn-black {
+  border: 1px solid #000 !important;
+  color: #000 !important;
+}
+.btn-black .arrow_right {
+  color: #000;
 }
 
 .navbar_lhs {

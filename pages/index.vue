@@ -1,7 +1,7 @@
 <template>
   <div class="main_ctn">
     <HomeHeroSection />
-    <HomeProductSection />
+    <HomeProductSection id="projects"/>
   </div>
 </template>
 
