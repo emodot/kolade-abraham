@@ -20,7 +20,9 @@
             <p class="menu_item" :class="{ 'color-black': scrolled }">Home</p>
           </nuxt-link>
           <nuxt-link to="#projects">
-            <p class="menu_item" :class="{ 'color-black': scrolled }">Projects</p>
+            <p class="menu_item" :class="{ 'color-black': scrolled }">
+              Projects
+            </p>
           </nuxt-link>
           <nuxt-link to="/about">
             <p class="menu_item" :class="{ 'color-black': scrolled }">About</p>
@@ -37,12 +39,34 @@
           </div>
         </div>
         <div class="mobile_menu">
-          <img
+          <svg
             class="hamburger"
-            src="assets/icons/hamburger.svg"
-            alt=""
             @click="$emit('triggerMobileMenu')"
-          />
+            width="20"
+            height="11"
+            viewBox="0 0 20 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 1H10.9"
+              :stroke="`${scrolled ? '#000' : '#F9F8F8'}`"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M1 5.5H19"
+              :stroke="`${scrolled ? '#000' : '#F9F8F8'}`"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M9.1001 10H19.0001"
+              :stroke="`${scrolled ? '#000' : '#F9F8F8'}`"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@hypernym/nuxt-gsap"],
+  modules: ["@hypernym/nuxt-gsap", "@formkit/auto-animate/nuxt"],
   devtools: { enabled: true },
   css: ["@/assets/styles/main.css"],
 });
