@@ -45,7 +45,7 @@ const projects = ref([
     description:
       "OpsPad streamlines DevOps workflow with a minimalist notepad design for monitoring and analyzing infrastructure performance.",
     image: "/opspad.png",
-    link: "#",
+    link: "https://www.behance.net/gallery/170294819/Opspad-Server-Management-Platform-UXUI-Case-Study",
   },
   {
     name: "Craigslist",
