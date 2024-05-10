@@ -16,7 +16,7 @@
             <p class="product_text">
               {{ project.description }}
             </p>
-            <button class="global_btn">View Details</button>
+            <a :href="project.link" :target="`${project.link === '#' ? '_self' : '_blank'}`"><button class="global_btn">View Details</button></a>
           </div>
         </div>
       </div>
@@ -31,42 +31,42 @@ const projects = ref([
     description:
       "Vaccess provides a seamless mobile app and website, streamlining Lagos vaccination center searches with real-time data, intuitive interfaces, and appointment booking.",
     image: "/vaccess.png",
-    link: "",
+    link: "https://abrahamkola.notion.site/Vaccess-Responsive-Web-Mobile-App-1051448714be48a0b3534adc42d6596d",
   },
   {
     name: "Tra-it AR App",
     description:
       "Tra-it AR offers virtual 'try-out' of ecommerce products, from furniture to clothes, in true-to-scale AR view, before purchase.",
     image: "/ar-app.png",
-    link: "",
+    link: "https://abrahamkola.notion.site/Tra-it-f3752f7264d1488ba7e3c2885dedb187",
   },
   {
     name: "OpsPad",
     description:
       "OpsPad streamlines DevOps workflow with a minimalist notepad design for monitoring and analyzing infrastructure performance.",
     image: "/opspad.png",
-    link: "",
+    link: "#",
   },
   {
     name: "Craigslist",
     description:
       "Craigslist's redesign mimics a newspaper's classifieds, facilitating local business ads, individual sales, and event postings, allowing user responses.",
     image: "/craigslist.png",
-    link: "",
+    link: "https://www.behance.net/gallery/159255543/Craigslist-Website-Redesign",
   },
   {
     name: "FELA",
     description:
       "Most farmers cannot afford to buy tractors outright or secure traditional loans due to a lack of collateral. FELA app connects farmers with equipment providers for leasing solutions.",
     image: "/fela.png",
-    link: "",
+    link: "https://www.behance.net/gallery/159102707/Farming-Equipment-Leasing-App",
   },
   {
     name: "Kairos Atelier",
     description:
       "Kairos Atelier uses design to address human issues with empathy and innovative solutions, operating as a multidisciplinary studio in architecture, art, and tech.",
     image: "/kairos.png",
-    link: "",
+    link: "https://kairos-atelier.webflow.io/",
   },
 ]);
 </script>
