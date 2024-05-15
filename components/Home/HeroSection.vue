@@ -12,16 +12,30 @@
         <span class="spaned_text">Access Bank.</span>
       </p>
     </div>
+    <div class="scroll_arrow_ctn">
+      <nuxt-link to="#projects" class="scroll_arrow">
+        <svg
+          width="27"
+          height="15"
+          viewBox="0 0 27 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 1L13.5 14L26 1" stroke="#FEFEFE" stroke-linecap="round" />
+        </svg>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
 <script setup>
 const { $gsap } = useNuxtApp();
-const greetings = ref(['Hello', 'Bonjour', 'Namaste']);
+const greetings = ref(["Hello", "Bonjour", "Namaste"]);
 const currentGreetingIndex = ref(0);
 
 function updateGreeting() {
-  currentGreetingIndex.value = (currentGreetingIndex.value + 1) % greetings.value.length;
+  currentGreetingIndex.value =
+    (currentGreetingIndex.value + 1) % greetings.value.length;
 }
 
 setInterval(updateGreeting, 3000);
@@ -29,10 +43,6 @@ setInterval(updateGreeting, 3000);
 onMounted(() => {
   $gsap.from(".hero_inner", { y: 200, duration: 1 });
 });
-
-// const animateText = () => {
-
-// };
 </script>
 
 <style scoped>
@@ -41,6 +51,7 @@ onMounted(() => {
   background-color: #000;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .hero_inner {
@@ -84,6 +95,29 @@ onMounted(() => {
   text-decoration: underline;
   text-decoration-color: var(--text-color);
   text-decoration-style: wavy;
+}
+
+.scroll_arrow_ctn {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+}
+
+.scroll_arrow_ctn {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media only screen and (max-width: 1200px) {
