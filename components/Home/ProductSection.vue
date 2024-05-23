@@ -126,6 +126,12 @@ const projects = ref([
   line-height: 28px;
 }
 
+.global_btn:hover {
+  background-color: #0C0C0C;
+  color: #fff;
+  transition: ease-in-out 0.3s;
+}
+
 @media only screen and (max-width: 1200px) {
   .product_inner {
     width: 85%;

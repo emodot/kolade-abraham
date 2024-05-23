@@ -4,7 +4,11 @@
       <h1 class="hero_head">{{ greetings[currentGreetingIndex] }},</h1>
       <p class="hero_text">
         I am ‘Kola, I like to make digital experiences
-        <span class="spaned_text wavy">easier and simpler</span> for people.
+        <span class="spaned_text wavy">easier and simpler
+          <svg class="underline" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <path d="M0,5 L5,0 L10,5 L15,0 L20,5 L25,0 L30,5 L35,0 L40,5 L45,0 L50,5 L55,0 L60,5 L65,0 L70,5 L75,0 L80,5 L85,0 L90,5 L95,0 L100,5" />
+          </svg>
+        </span> for people.
       </p>
       <p class="hero_text">
         Currently working as a
@@ -84,17 +88,45 @@ onMounted(() => {
   font-size: 20px;
   margin-top: 15px;
   line-height: 26px;
+  position: relative;
 }
 
 .spaned_text {
   color: #b8b8b8;
   font-size: inherit;
+  display: inline-block;
+  position: relative;
 }
 
 .wavy {
-  text-decoration: underline;
-  text-decoration-color: var(--text-color);
-  text-decoration-style: wavy;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.underline path {
+  stroke: #b8b8b8;
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 100;
+  animation: zigzagAnimation 2s linear infinite;
+}
+
+@keyframes zigzagAnimation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
 }
 
 .scroll_arrow_ctn {
