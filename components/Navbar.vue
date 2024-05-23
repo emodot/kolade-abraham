@@ -118,6 +118,16 @@ onMounted(() => {
 .btn-black .arrow_right {
   color: #000;
 }
+.btn-black:hover {
+  border: 1px solid #0C0C0C !important;
+  color: #fff !important;
+  background-color: #0C0C0C !important;
+  transition: ease-in-out 0.3s;
+}
+
+.btn-black:hover .arrow_right {
+  color: #fff !important;
+}
 
 .navbar_lhs {
   display: flex;
@@ -160,6 +170,16 @@ onMounted(() => {
   color: #fff;
   margin-left: 6px;
 }
+.global_btn:hover {
+  background-color: #fff;
+  color: #0C0C0C;
+  transition: ease-in-out 0.3s;
+}
+.global_btn:hover .arrow_right {
+  color: #0C0C0C;
+  transition: ease-in-out 0.3s;
+}
+
 
 .menu_item {
   cursor: pointer;
