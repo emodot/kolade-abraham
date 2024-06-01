@@ -106,7 +106,7 @@ onMounted(() => {
 
 .underline {
   position: absolute;
-  bottom: -2px;
+  bottom: -7px;
   left: 0;
   width: 100%;
   height: 10px;
