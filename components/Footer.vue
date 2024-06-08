@@ -5,7 +5,7 @@
         <div class="footer_lhs">
           <p class="footer_head">GET IN TOUCH</p>
           <p class="email">Contact@abrahamkolade.com</p>
-          <p class="location">Lagos, NG</p>
+          <p class="location">Ontario, CA</p>
         </div>
         <div class="footer_rhs">
           <p class="footer_head">LET'S CONNECT</p>
@@ -23,7 +23,12 @@
                 target="_blank"
                 >Twitter</a
               >
-              <a class="links" href="#" target="_blank">Resume</a>
+              <a
+                class="links"
+                href="https://abrahamkola.notion.site/b6a396aafc494f519b70d6ce1fada8ed#52097237c64945a2b72230d1b4980002"
+                target="_blank"
+                >Resume</a
+              >
             </div>
             <div class="rhs_links">
               <a
@@ -162,7 +167,7 @@ a {
   .footer_bottom {
     flex-direction: column;
   }
-  
+
   .bottom_rhs {
     margin-top: 30px;
   }

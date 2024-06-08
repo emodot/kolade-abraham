@@ -17,15 +17,43 @@
       <div class="navbar_rhs">
         <div class="menu_list">
           <nuxt-link to="/">
-            <p class="menu_item" :class="{ 'color-black': scrolled }">Home</p>
+            <p class="menu_item wavy" :class="{ 'color-black': scrolled }">
+              Home
+              <svg
+                class="underline"
+                viewBox="0 0 50 10"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,5 L5,0 L10,5 L15,0 L20,5 L25,0 L30,5 L35,0 L40,5 L45,0 L50,5 L55,0 L60,5 L65,0 L70,5 L75,0 L80,5 L85,0 L90,5 L95,0 L100,5"
+                />
+              </svg>
+            </p>
           </nuxt-link>
           <nuxt-link to="#projects">
-            <p class="menu_item" :class="{ 'color-black': scrolled }">
+            <p class="menu_item wavy" :class="{ 'color-black': scrolled }">
               Projects
+              <svg
+                class="underline"
+                viewBox="0 0 50 10"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,5 L5,0 L10,5 L15,0 L20,5 L25,0 L30,5 L35,0 L40,5 L45,0 L50,5 L55,0 L60,5 L65,0 L70,5 L75,0 L80,5 L85,0 L90,5 L95,0 L100,5"
+                />
+              </svg>
             </p>
           </nuxt-link>
           <nuxt-link to="/about">
-            <p class="menu_item" :class="{ 'color-black': scrolled }">About</p>
+            <p class="menu_item wavy" :class="{ 'color-black': scrolled }">About<svg
+                class="underline"
+                viewBox="0 0 50 10"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,5 L5,0 L10,5 L15,0 L20,5 L25,0 L30,5 L35,0 L40,5 L45,0 L50,5 L55,0 L60,5 L65,0 L70,5 L75,0 L80,5 L85,0 L90,5 L95,0 L100,5"
+                />
+              </svg></p>
           </nuxt-link>
           <div class="account_btn">
             <a href="mailto:contact@abrahamkolade.com" target="_blank">
@@ -119,9 +147,9 @@ onMounted(() => {
   color: #000;
 }
 .btn-black:hover {
-  border: 1px solid #0C0C0C !important;
+  border: 1px solid #0c0c0c !important;
   color: #fff !important;
-  background-color: #0C0C0C !important;
+  background-color: #0c0c0c !important;
   transition: ease-in-out 0.3s;
 }
 
@@ -172,14 +200,13 @@ onMounted(() => {
 }
 .global_btn:hover {
   background-color: #fff;
-  color: #0C0C0C;
+  color: #0c0c0c;
   transition: ease-in-out 0.3s;
 }
 .global_btn:hover .arrow_right {
-  color: #0C0C0C;
+  color: #0c0c0c;
   transition: ease-in-out 0.3s;
 }
-
 
 .menu_item {
   cursor: pointer;
@@ -205,6 +232,42 @@ onMounted(() => {
 .hamburger {
   cursor: pointer;
   width: 24px;
+}
+
+.wavy:hover .underline {
+  display: block;
+}
+
+.wavy {
+  display: underline;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.underline {
+  display: none;
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.underline path {
+  stroke: #b8b8b8;
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 100;
+  animation: zigzagAnimation 2s linear infinite;
+}
+
+@keyframes zigzagAnimation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -200;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
