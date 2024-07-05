@@ -8,9 +8,9 @@
             <p class="about_text">
               My name is <span class="bold_text">Kolade</span> and I’m a
               <span class="bold_text"
-                >Product Designer based in Lagos, NG.</span
+                >Product Designer based in Ontario, CA.</span
               >
-              I have a Masters in Architecture, and a background in Graphics
+              I have a Masters in Architecture, and a background in Visual
               design.
             </p>
           </div>
